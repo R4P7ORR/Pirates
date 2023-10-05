@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace Pirates
@@ -26,7 +27,8 @@ namespace Pirates
 		}
 		public override string ToString()
 		{
-			return "Kalózok száma: " + pirates.Count;
+			return $"Captain state:	{this.captain.state}	-	Grog consumed:	{this.captainGrog}\n" +
+				$"Crew count:	{this.pirates.Count}";
 		}
 	}
 }

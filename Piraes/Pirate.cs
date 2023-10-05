@@ -89,5 +89,20 @@ namespace Pirates
 			Random r = new Random();
 			return r.Next(min, max);
 		}
+		public string state()
+		{
+			if(this.isDead)
+			{
+				return "Dead";
+			}
+			else if(this.passedOut > 0)
+			{
+				return "Passed out";
+			}
+			else
+			{
+				return "Ready";
+			}
+		}
 	}
 }
